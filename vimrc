@@ -49,6 +49,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
+" Python Mode
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
+" You complete me
+Plug 'ycm-core/YouCompleteMe'
+
 " Initialize plugin system
 call plug#end()
 
