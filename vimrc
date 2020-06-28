@@ -55,6 +55,10 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " You complete me
 Plug 'ycm-core/YouCompleteMe'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Initialize plugin system
 call plug#end()
 
