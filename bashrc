@@ -118,10 +118,19 @@ fi
 
 ###### Akarsh Kumar ######
 
+# Show current git branch in command line
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+PS1=${PS1::-3}'\[\e[91m\]$(parse_git_branch)\[\033[00m\]\$ '
+
+# Copying to clipboard
 alias cclip='xclip -selection clipboard'
 
-
+# Some python binaries
 export PATH=$PATH:~/.local/bin
+
+# Ease of use for tactile project
 export DATA_ROOT='/mnt/tactile/recordings/2020-02-04/hand-object/'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
