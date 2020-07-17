@@ -3,6 +3,7 @@
 set number
 set relativenumber
 
+set spell
 
 " Plugins
 " Install vim-plug
