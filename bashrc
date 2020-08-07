@@ -118,6 +118,9 @@ fi
 
 ###### Akarsh Kumar ######
 
+# Bash Vi Mode
+set -o vi
+
 # Show current git branch in command line
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
