@@ -5,6 +5,30 @@ set relativenumber
 
 set list
 
+let mapleader = ","
+let g:mapleader = ","
+
+" d and x delete, not cut
+" from: https://github.com/pazams/d-is-for-delete/blob/master/d-is-for-delete-shared-clipboard
+nnoremap x "_x
+nnoremap X "_X
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+
+" leader d copies to the system clipboard
+if has('unnamedplus') " system clipboard is default clipboard
+  set clipboard=unnamed,unnamedplus
+  nnoremap <leader>d "+d
+  nnoremap <leader>D "+D
+  vnoremap <leader>d "+d
+else
+  set clipboard=unnamed
+  nnoremap <leader>d "*d
+  nnoremap <leader>D "*D
+  vnoremap <leader>d "*d
+endif
+
 " Plugins
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -98,3 +122,4 @@ set background=dark
 
 " let g:pymode_rope = 1
 " let g:pymode_rope_completion = 1
+
