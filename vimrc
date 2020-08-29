@@ -88,8 +88,15 @@ Plug 'vim-airline/vim-airline-themes'
 " Gruvbox
 Plug 'morhetz/gruvbox'
 
+" Vim Latex Live Preview
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Vim Latex Suite
+Plug 'https://github.com/vim-latex/vim-latex'
+
 " Initialize plugin system
 call plug#end()
+
+let g:livepreview_previewer = 'xdg-open'
 
 " The following is from
 " https://github.com/erkrnt/awesome-streamerrc/blob/master/ThePrimeagen/init.vim
