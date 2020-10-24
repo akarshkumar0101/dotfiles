@@ -3,3 +3,4 @@
 	name = Akarsh Kumar
 [core]
 	editor = vim
+	autocrlf = input
