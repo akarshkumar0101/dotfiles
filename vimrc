@@ -127,6 +127,7 @@ let g:livepreview_previewer = 'xdg-open'
 colorscheme gruvbox
 set background=dark
 
-" let g:pymode_rope = 1
-" let g:pymode_rope_completion = 1
+let g:pymode_rope = 1
+let g:pymode_rope_completion = 1
+set completeopt=menuone,noinsert
 
