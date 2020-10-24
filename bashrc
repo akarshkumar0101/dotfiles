@@ -137,3 +137,8 @@ export PATH=$PATH:~/.local/bin
 export DATA_ROOT='/mnt/tactile/recordings/2020-02-04/hand-object/'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# alias git into hub
+eval "$(hub alias -s)"
+
+
