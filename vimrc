@@ -1,22 +1,28 @@
 
-" Debugging variables
-map <leader>r :source $MYVIMRC <CR>
-map <leader>s :reg +<CR>:reg *<CR>
-
 let g:mapleader = ","
+
+" Debugging variables
+noremap <leader>r :source $MYVIMRC <CR>
+" noremap <leader>s :reg +<CR>:reg *<CR>
 
 set updatetime=750
 
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+noremap <C-n> gt
+noremap <C-p> gT
+
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
 
 
 set relativenumber
 
 syntax enable
 set list
+
+set signcolumn=yes
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Clipboard Stuff
@@ -47,10 +53,10 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set colorcolumn=80 | highlight ColorColumn ctermbg=238
 " highlight Normal ctermbg=235
-highlight EndOfBuffer ctermbg=238
-highlight LineNr ctermbg=238 ctermfg=white
+highlight EndOfBuffer ctermfg=238 ctermbg=238
+highlight LineNr ctermfg=white ctermbg=238
 
-highlight SignColumn cterm=bold ctermbg=238 ctermfg=white
+highlight SignColumn ctermfg=white ctermbg=238
 " highlight! link SignColumn LineNr
 highlight GitGutterAdd    ctermfg=2 ctermbg=238
 highlight GitGutterChange ctermfg=3 ctermbg=238
@@ -61,7 +67,5 @@ highlight GitGutterDelete ctermfg=3 ctermbg=238
 
 " Load plugins
 source ~/.plugins.vim
-
-
 
 
