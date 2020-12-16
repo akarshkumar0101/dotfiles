@@ -15,6 +15,7 @@ noremap <C-k> <C-W>k
 noremap <C-h> <C-W>h
 noremap <C-l> <C-W>l
 
+set wildmenu
 
 set relativenumber
 

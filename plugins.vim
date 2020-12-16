@@ -23,7 +23,8 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'airblade/vim-gitgutter'
 
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
@@ -57,10 +58,14 @@ call plug#end()
 
 " colorscheme gruvbox
 " set background=dark
-" 
-let g:pymode_rope = 1
-let g:pymode_rope_completion = 1
-set completeopt=menuone,noinsert
+
+
+" let g:pymode_rope = 1
+" let g:pymode_rope_completion = 1
+" set completeopt=menuone,noinsert
+" let g:pymode_rope_organize_imports_bind = '<C-c>ro'
+" let g:pymode_rope_autoimport=1
+
 
 
 let g:NERDTreeWinPos = "right"
