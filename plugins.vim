@@ -14,10 +14,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 
-Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }   
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jistr/vim-nerdtree-tabs'
-
+Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }   
 
 Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
@@ -37,8 +36,9 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'https://github.com/vim-latex/vim-latex'
-
 " Plug 'morhetz/gruvbox'
+
+Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
 
@@ -68,19 +68,19 @@ let NERDTreeShowHidden=0
 " let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
 noremap <leader>nn :NERDTreeToggle<cr>
-" noremap <leader>nn :NERDTreeTabsToggle<cr>
+noremap <leader>nn :NERDTreeTabsToggle<cr>
 noremap <leader>nb :NERDTreeFromBookmark<Space>
 noremap <leader>nf :NERDTreeFind<cr>
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
+                \ 'Modified'  :'~',
+                \ 'Staged'    :'+',
+                \ 'Untracked' :'*',
                 \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
+                \ 'Unmerged'  :'=',
+                \ 'Deleted'   :'-',
+                \ 'Dirty'     :'x',
+                \ 'Ignored'   :'i',
+                \ 'Clean'     :'c',
                 \ 'Unknown'   :'?',
                 \ }
 
@@ -88,3 +88,5 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 nmap <C-_> gcc
 vmap <C-_> gc
 
+
+colorscheme archery

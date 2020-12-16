@@ -44,7 +44,6 @@ set autoindent | set smartindent
 set wrap
 
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -63,9 +62,6 @@ highlight VertSplit ctermfg=238 ctermbg=245
 
 
 
-
-
 " Load plugins
 source ~/.plugins.vim
-
 
