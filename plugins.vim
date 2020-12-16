@@ -58,9 +58,9 @@ call plug#end()
 " colorscheme gruvbox
 " set background=dark
 " 
-" let g:pymode_rope = 1
-" let g:pymode_rope_completion = 1
-" set completeopt=menuone,noinsert
+let g:pymode_rope = 1
+let g:pymode_rope_completion = 1
+set completeopt=menuone,noinsert
 
 
 let g:NERDTreeWinPos = "right"
@@ -89,4 +89,4 @@ nmap <C-_> gcc
 vmap <C-_> gc
 
 
-colorscheme archery
+" colorscheme archery
