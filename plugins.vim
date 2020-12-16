@@ -11,8 +11,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
 
 
 Plug 'vim-airline/vim-airline'
@@ -63,10 +67,10 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 " let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
-
+noremap <leader>nn :NERDTreeToggle<cr>
+" noremap <leader>nn :NERDTreeTabsToggle<cr>
+noremap <leader>nb :NERDTreeFromBookmark<Space>
+noremap <leader>nf :NERDTreeFind<cr>
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'✹',
                 \ 'Staged'    :'✚',
@@ -81,4 +85,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ }
 
 
+nmap <C-_> gcc
+vmap <C-_> gc
 
