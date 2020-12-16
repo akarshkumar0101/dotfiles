@@ -17,28 +17,25 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
-"
+
 Plug 'airblade/vim-gitgutter'
 
-" Plug 'junegunn/vim-easy-align'
-
-" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+" Plug 'junegunn/vim-easy-align'
+
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Plug 'https://github.com/vim-latex/vim-latex'
 
 " Plug 'morhetz/gruvbox'
 
-" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-
-" Plug 'https://github.com/vim-latex/vim-latex'
-
-" Initialize plugin system
 call plug#end()
 
 " let g:livepreview_previewer = 'xdg-open'
@@ -53,21 +50,6 @@ call plug#end()
 " endif
 " let g:gruvbox_invert_selection='0'
 
-" --- vim go (polyglot) settings.
-" let g:go_highlight_build_constraints = 1
-" let g:go_highlight_extra_types = 1
-" let g:go_highlight_fields = 1
-" let g:go_highlight_functions = 1
-" let g:go_highlight_methods = 1
-" let g:go_highlight_operators = 1
-" let g:go_highlight_structs = 1
-" let g:go_highlight_types = 1
-" let g:go_highlight_function_parameters = 1
-" let g:go_highlight_function_calls = 1
-" let g:go_highlight_generate_tags = 1
-" let g:go_highlight_format_strings = 1
-" let g:go_highlight_variable_declarations = 1
-" let g:go_auto_sameids = 1
 
 " colorscheme gruvbox
 " set background=dark

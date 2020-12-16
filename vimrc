@@ -21,9 +21,6 @@ set relativenumber
 syntax enable
 set list
 
-set signcolumn=yes
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Clipboard Stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -61,6 +58,9 @@ highlight SignColumn ctermfg=white ctermbg=238
 highlight GitGutterAdd    ctermfg=2 ctermbg=238
 highlight GitGutterChange ctermfg=3 ctermbg=238
 highlight GitGutterDelete ctermfg=3 ctermbg=238
+
+highlight VertSplit ctermfg=238 ctermbg=245
+
 
 
 
