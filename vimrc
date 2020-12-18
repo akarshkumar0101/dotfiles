@@ -53,25 +53,6 @@ set linebreak | set tw=500 " Linebreak on 500 characters
 set autoindent | set smartindent
 set wrap
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set colorcolumn=80 | highlight ColorColumn ctermbg=238
-" highlight Normal ctermbg=235
-highlight EndOfBuffer ctermfg=238 ctermbg=238
-highlight LineNr ctermfg=white ctermbg=238
-
-highlight SignColumn ctermfg=white ctermbg=238
-" highlight! link SignColumn LineNr
-highlight GitGutterAdd    ctermfg=2 ctermbg=238
-highlight GitGutterChange ctermfg=3 ctermbg=238
-highlight GitGutterDelete ctermfg=3 ctermbg=238
-
-highlight VertSplit ctermfg=238 ctermbg=245
-
-
-
 " Load plugins
 source ~/.plugins.vim
 

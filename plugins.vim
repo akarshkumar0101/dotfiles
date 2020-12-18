@@ -23,7 +23,7 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'airblade/vim-gitgutter'
 
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'ycm-core/YouCompleteMe'
@@ -40,7 +40,12 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'morhetz/gruvbox'
 
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'ajh17/Spacegray.vim'
+" Plug 'ajh17/Spacegray.vim'
+"
+" set nocompatible
+let g:python_highlight_all = 1
+
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -95,12 +100,36 @@ nmap <C-_> gcc
 vmap <C-_> gc
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " colorscheme archery
 " colorscheme spacegray
 colorscheme space-vim-dark
+
+highlight Comment cterm=italic ctermfg=59
+highlight! link EndOfBuffer LineNr
+
 " let g:spacegray_use_italics = 1
 " let g:spacegray_underline_search = 1
+set colorcolumn=80 | highlight! link ColorColumn LineNr " highlight ColorColumn ctermbg=238
 
+
+" My Custom Color Configuration:
+"
+" highlight Normal ctermbg=235
+" highlight EndOfBuffer ctermfg=238 ctermbg=238
+" highlight LineNr ctermfg=white ctermbg=238
+
+" highlight SignColumn ctermfg=white ctermbg=238
+" " highlight! link SignColumn LineNr
+" highlight GitGutterAdd    ctermfg=2 ctermbg=238
+" highlight GitGutterChange ctermfg=3 ctermbg=238
+" highlight GitGutterDelete ctermfg=3 ctermbg=238
+
+" highlight VertSplit ctermfg=238 ctermbg=245
 
 
 
