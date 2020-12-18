@@ -7,6 +7,9 @@ noremap <leader>r :source $MYVIMRC <CR>
 
 set updatetime=750
 
+inoremap fj <Esc>
+inoremap jf <Esc>
+
 noremap <C-n> gt
 noremap <C-p> gT
 
@@ -18,6 +21,7 @@ noremap <C-l> <C-W>l
 set wildmenu
 
 set relativenumber
+set number
 
 syntax enable
 set list
