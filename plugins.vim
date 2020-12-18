@@ -40,6 +40,7 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'morhetz/gruvbox'
 
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'ajh17/Spacegray.vim'
 
 call plug#end()
 
@@ -95,3 +96,11 @@ vmap <C-_> gc
 
 
 " colorscheme archery
+" colorscheme spacegray
+colorscheme space-vim-dark
+" let g:spacegray_use_italics = 1
+" let g:spacegray_underline_search = 1
+
+
+
+
