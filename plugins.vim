@@ -11,6 +11,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+Plug 'jiangmiao/auto-pairs'
+
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 
@@ -25,6 +28,8 @@ Plug 'airblade/vim-gitgutter'
 
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"
+Plug 'dense-analysis/ale'
 
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
