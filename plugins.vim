@@ -114,10 +114,9 @@ highlight! link EndOfBuffer LineNr
 
 " let g:spacegray_use_italics = 1
 " let g:spacegray_underline_search = 1
-set colorcolumn=80 | highlight! link ColorColumn LineNr " highlight ColorColumn ctermbg=238
-
 
 " My Custom Color Configuration:
+set colorcolumn=80 | highlight! link ColorColumn LineNr " highlight ColorColumn ctermbg=238
 "
 " highlight Normal ctermbg=235
 " highlight EndOfBuffer ctermfg=238 ctermbg=238
