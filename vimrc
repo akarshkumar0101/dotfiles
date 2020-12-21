@@ -57,6 +57,7 @@ set wrap
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Insert Mode Vertical Block Cursor
+" From: https://stackoverflow.com/questions/16137623/setting-the-cursor-to-a-vertical-thin-line-in-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!

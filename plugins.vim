@@ -12,7 +12,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'tpope/vim-surround'
+" Plug 'junegunn/vim-easy-align'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -26,19 +27,20 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'airblade/vim-gitgutter'
 
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"
-Plug 'dense-analysis/ale'
 
+Plug 'liuchengxu/vista.vim'
+
+
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
-" Plug 'junegunn/vim-easy-align'
+Plug 'dense-analysis/ale'
 
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
 
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'https://github.com/vim-latex/vim-latex'
