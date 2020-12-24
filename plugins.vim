@@ -38,7 +38,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
-Plug 'dense-analysis/ale'
+" Plug 'kiteco/vim-plugin'
+
+
+" Plug 'dense-analysis/ale'
+"
+"
+Plug 'Yggdroot/indentLine'
 
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
