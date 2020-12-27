@@ -22,6 +22,7 @@ call plug#begin(VIM_PLUG_DIR)
 
 Plug 'junegunn/vim-plug'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'

@@ -25,6 +25,14 @@ noremap <leader>d "+d | map <leader>D "+D
 noremap <leader>x "+x | map <leader>X "+X
 
 
+nnoremap <leader>f :Files<CR>
+
+nnoremap // :noh<CR>
+
 nmap <C-_> gcc
 vmap <C-_> gc
+
+
+autocmd FileType python nnoremap <buffer> <leader>r :echo "running"<CR>
+autocmd FileType markdown nmap <buffer> <leader>r <Plug>MarkdownPreviewToggle
 
