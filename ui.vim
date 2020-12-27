@@ -23,6 +23,7 @@ endif
 
 " colorscheme archery
 " colorscheme spacegray
+" colorscheme iceberg
 colorscheme space-vim-dark
 
 highlight Comment cterm=italic ctermfg=59

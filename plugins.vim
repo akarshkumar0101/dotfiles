@@ -21,30 +21,33 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin(VIM_PLUG_DIR)
 
 Plug 'junegunn/vim-plug'
-
+" FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
-
+Plug 'junegunn/goyo.vim'
+" Parenthesis
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
-
+Plug 'junegunn/vim-easy-align'
+" Git
 Plug 'tpope/vim-fugitive'
+" Comments
 Plug 'tpope/vim-commentary'
-
-Plug 'preservim/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }   
+" Plug 'preservim/nerdcommenter'
+" NERDTree
+Plug 'preservim/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }   
-
-Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
+Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
+" Airline
+Plug 'vim-airline/vim-airline' " | Plug 'vim-airline/vim-airline-themes'
+" GitGutter
 Plug 'airblade/vim-gitgutter'
 
 Plug 'liuchengxu/vista.vim'
 
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Auto completion and linting
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -53,29 +56,29 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'dense-analysis/ale'
 
+" Indentation
 Plug 'Yggdroot/indentLine'
 
+" Snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
+" Latex
 Plug 'lervag/vimtex'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'https://github.com/vim-latex/vim-latex'
-" Plug 'morhetz/gruvbox'
 
-
+" Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 
+" Colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'morhetz/gruvbox'
 " Plug 'ajh17/Spacegray.vim'
-"
+
 " set nocompatible
 let g:python_highlight_all = 1
-
 Plug 'sheerun/vim-polyglot'
-
-
-Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
