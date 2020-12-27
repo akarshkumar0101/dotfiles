@@ -118,6 +118,9 @@ fi
 
 ###### Akarsh Kumar ######
 
+
+alias reload='source ~/.bashrc'
+
 # Bash Vi Mode
 set -o vi
 
@@ -141,24 +144,19 @@ export DATA_ROOT='/mnt/tactile/recordings/2020-02-04/hand-object/'
 # alias git into hub
 eval "$(hub alias -s)"
 
-
-
-
 source /usr/share/bash-completion/completions/git
-alias g='git'
+# alias g='git'
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gco='git checkout'
-__git_complete g _git
+# __git_complete g _git
 __git_complete gd _git_diff
 __git_complete ga _git_add
 __git_complete gc _git_commit
 __git_complete gco _git_checkout
 
-
-
-
+alias vim='nvim'
 
