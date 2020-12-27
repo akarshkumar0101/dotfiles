@@ -46,11 +46,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
 Plug 'Yggdroot/indentLine'
 
-" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' " | Plug 'honza/vim-snippets'
 
+Plug 'lervag/vimtex'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'https://github.com/vim-latex/vim-latex'
 " Plug 'morhetz/gruvbox'
+
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 
 Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'ajh17/Spacegray.vim'
@@ -59,6 +64,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 let g:python_highlight_all = 1
 
 Plug 'sheerun/vim-polyglot'
+
+
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -145,3 +153,10 @@ set colorcolumn=80 | highlight! link ColorColumn LineNr " highlight ColorColumn 
 
 
 
+
+
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
