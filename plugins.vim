@@ -1,19 +1,31 @@
-" Download vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" Download vim-plug and Auto-Install vim-plug
+if has('nvim')
+  if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  endif
+  let VIM_PLUG_DIR = '~/.config/nvim/autoload/plugged'
+else
+  if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  endif
+  let VIM_PLUG_DIR = '~/.vim/plugged'
 endif
 
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
 
-" Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin(VIM_PLUG_DIR)
 
+Plug 'junegunn/vim-plug'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
-" Plug 'junegunn/vim-easy-align'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -27,9 +39,7 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'airblade/vim-gitgutter'
 
-
 Plug 'liuchengxu/vista.vim'
-
 
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
@@ -40,10 +50,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'kiteco/vim-plugin'
 
-
 " Plug 'dense-analysis/ale'
-"
-"
+
 Plug 'Yggdroot/indentLine'
 
 Plug 'SirVer/ultisnips' " | Plug 'honza/vim-snippets'
@@ -115,44 +123,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'c',
                 \ 'Unknown'   :'?',
                 \ }
-
-
-nmap <C-_> gcc
-vmap <C-_> gc
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" colorscheme archery
-" colorscheme spacegray
-colorscheme space-vim-dark
-
-highlight Comment cterm=italic ctermfg=59
-highlight! link EndOfBuffer LineNr
-
-" let g:spacegray_use_italics = 1
-" let g:spacegray_underline_search = 1
-
-" My Custom Color Configuration:
-set colorcolumn=80 | highlight! link ColorColumn LineNr " highlight ColorColumn ctermbg=238
-"
-" highlight Normal ctermbg=235
-" highlight EndOfBuffer ctermfg=238 ctermbg=238
-" highlight LineNr ctermfg=white ctermbg=238
-
-" highlight SignColumn ctermfg=white ctermbg=238
-" " highlight! link SignColumn LineNr
-" highlight GitGutterAdd    ctermfg=2 ctermbg=238
-" highlight GitGutterChange ctermfg=3 ctermbg=238
-" highlight GitGutterDelete ctermfg=3 ctermbg=238
-
-" highlight VertSplit ctermfg=238 ctermbg=245
-
-
-
 
 
 let g:tex_flavor='latex'
