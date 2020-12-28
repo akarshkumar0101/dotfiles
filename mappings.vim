@@ -27,7 +27,7 @@ noremap <leader>x "+x | map <leader>X "+X
 
 nnoremap <leader>f :Files<CR>
 
-nnoremap // :noh<CR>
+nnoremap <leader>/ :noh<CR>
 
 nmap <C-_> gcc
 vmap <C-_> gc
