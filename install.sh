@@ -4,6 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ln -s $DIR/bashrc ~/.bashrc
 ln -s $DIR/bash_profile ~/.bash_profile
 
+ln -s $DIR/zshrc ~/.zshrc
 
 mkdir -p ~/.config/nvim
 ln -s $DIR/init.vim ~/.config/nvim/init.vim
