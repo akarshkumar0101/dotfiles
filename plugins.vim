@@ -76,6 +76,12 @@ Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'morhetz/gruvbox'
 " Plug 'ajh17/Spacegray.vim'
 
+Plug 'lilydjwg/colorizer'
+" Following plugin is better but it requires golang, so nah.
+" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+
+
 " set nocompatible
 let g:python_highlight_all = 1
 Plug 'sheerun/vim-polyglot'

@@ -90,7 +90,7 @@ ZSH_THEME="lukerandall"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &>/dev/null
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &>/dev/null
 
-plugins=(git vi-mode fzf z colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git github vi-mode fzf z colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
