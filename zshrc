@@ -120,11 +120,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+PATH=$PATH:~/.local/bin
+
 alias reload='source ~/.zshrc'
 
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
+if command -v nvim &> /dev/null
+then
+    export VISUAL=nvim
+else
+    export VISUAL=vim
+fi
 
-export EDITOR=nvim
+export EDITOR="$VISUAL"
+
+alias v='$EDITOR'
+alias vim='$EDITOR'
+
+alias bashrc='$EDITOR ~/.bashrc'
+alias zshrc='$EDITOR ~/.zshrc'
 
