@@ -36,6 +36,7 @@ Plug 'tpope/vim-commentary'
 " NERDTree
 Plug 'preservim/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 " Airline
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
