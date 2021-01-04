@@ -13,6 +13,17 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 
 
+" naviagte 'display lines' instead of hard lines
+" from: http://stackoverflow.com/a/8347066
+noremap <silent> <Up> gk
+imap <silent> <Up> <C-o>gk
+noremap <silent> <Down> gj
+imap <silent> <Down> <C-o>gj
+noremap <silent> <home> g<home>
+imap <silent> <home> <C-o>g<home>
+noremap <silent> <End> g<End>
+imap <silent> <End> <C-o>g<End>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Clipboard Stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -35,4 +46,5 @@ vmap <C-_> gc
 
 autocmd FileType python nnoremap <buffer> <leader>r :echo "running"<CR>
 autocmd FileType markdown nmap <buffer> <leader>r <Plug>MarkdownPreviewToggle
+
 
