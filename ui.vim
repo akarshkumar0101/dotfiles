@@ -2,18 +2,21 @@
 " => Insert Mode Vertical Block Cursor
 " From: https://stackoverflow.com/questions/16137623/setting-the-cursor-to-a-vertical-thin-line-in-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-\ if v:insertmode == 'i' |
-\   silent execute '!echo -ne "\e[6 q"' | redraw! |
-\ elseif v:insertmode == 'r' |
-\   silent execute '!echo -ne "\e[4 q"' | redraw! |
-\ endif
-au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
+" if has("autocmd")
+"   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+"   au InsertEnter,InsertChange *
+" \ if v:insertmode == 'i' |
+" \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+" \ elseif v:insertmode == 'r' |
+" \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+" \ endif
+" au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+" endif
 
+" autocmd InsertEnter * set cul
+" autocmd InsertLeave * set nocul
 
+" set guicursor=i:ver100-iCursor
 
 
 

@@ -134,7 +134,7 @@ fi
 export EDITOR="$VISUAL"
 
 alias v='$EDITOR'
-alias vim='$EDITOR'
+# alias vim='$EDITOR'
 
 alias bashrc='$EDITOR ~/.bashrc'
 alias zshrc='$EDITOR ~/.zshrc'
