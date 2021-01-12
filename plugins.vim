@@ -47,8 +47,8 @@ Plug 'liuchengxu/vista.vim'
 
 " Auto completion and linting
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
