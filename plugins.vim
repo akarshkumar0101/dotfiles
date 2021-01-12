@@ -74,7 +74,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 " Colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 " Plug 'ajh17/Spacegray.vim'
 
 Plug 'lilydjwg/colorizer'

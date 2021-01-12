@@ -2,18 +2,21 @@
 " => Insert Mode Vertical Block Cursor
 " From: https://stackoverflow.com/questions/16137623/setting-the-cursor-to-a-vertical-thin-line-in-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-\ if v:insertmode == 'i' |
-\   silent execute '!echo -ne "\e[6 q"' | redraw! |
-\ elseif v:insertmode == 'r' |
-\   silent execute '!echo -ne "\e[4 q"' | redraw! |
-\ endif
-au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
+" if has("autocmd")
+"   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+"   au InsertEnter,InsertChange *
+" \ if v:insertmode == 'i' |
+" \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+" \ elseif v:insertmode == 'r' |
+" \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+" \ endif
+" au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+" endif
 
+" autocmd InsertEnter * set cul
+" autocmd InsertLeave * set nocul
 
+" set guicursor=i:ver100-iCursor
 
 
 
@@ -26,6 +29,12 @@ endif
 " colorscheme iceberg
 " colorscheme OceanicNext
 colorscheme space-vim-dark
+
+
+" let g:gruvbox_transparent_bg = 1
+" set background=dark    " Setting dark mode
+" let g:gruvbox_number_column = 'fg'
+" colorscheme gruvbox
 
 highlight Comment cterm=italic ctermfg=59
 highlight! link EndOfBuffer LineNr
