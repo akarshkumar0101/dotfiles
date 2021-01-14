@@ -1,5 +1,5 @@
-inoremap fj <Esc>
-inoremap jf <Esc>
+" inoremap fj <Esc>
+" inoremap jf <Esc>
 
 nnoremap <C-n> :tabnext<CR>
 nnoremap <C-p> :tabprevious<CR>
