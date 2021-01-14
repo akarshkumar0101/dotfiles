@@ -29,6 +29,9 @@
 " colorscheme iceberg
 " colorscheme OceanicNext
 colorscheme space-vim-dark
+" colorscheme dracula
+" colorscheme onedark
+" colorscheme nord
 
 
 " let g:gruvbox_transparent_bg = 1
@@ -36,15 +39,20 @@ colorscheme space-vim-dark
 " let g:gruvbox_number_column = 'fg'
 " colorscheme gruvbox
 
-highlight Comment cterm=italic ctermfg=59
-highlight! link EndOfBuffer LineNr
 
 " let g:spacegray_use_italics = 1
 " let g:spacegray_underline_search = 1
 
 " My Custom Color Configuration:
-set colorcolumn=80 | highlight! link ColorColumn LineNr " highlight ColorColumn ctermbg=238
-"
+highlight Comment cterm=italic ctermfg=59
+highlight! link EndOfBuffer LineNr
+set colorcolumn=80 | highlight! link ColorColumn LineNr 
+" set colorcolumn=80 | highlight ColorColumn ctermbg=238
+
+
+
+
+
 " highlight Normal ctermbg=235
 " highlight EndOfBuffer ctermfg=238 ctermbg=238
 " highlight LineNr ctermfg=white ctermbg=238

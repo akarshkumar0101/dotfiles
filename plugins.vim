@@ -76,6 +76,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'morhetz/gruvbox'
 " Plug 'ajh17/Spacegray.vim'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'joshdick/onedark.vim'
+" Plug 'arcticicestudio/nord-vim'
+
 
 Plug 'lilydjwg/colorizer'
 " Following plugin is better but it requires golang, so nah.
