@@ -38,9 +38,19 @@ noremap <leader>d "+d | map <leader>D "+D
 noremap <leader>x "+x | map <leader>X "+X
 
 
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>fs :Snippets<CR>
+nnoremap <leader>fw :Windows<CR>
+nnoremap <leader>fm :Marks<CR>
+nnoremap <leader>fhc :History:<CR>
+nnoremap <leader>fhs :History/<CR>
+nnoremap <leader>fc :Commits<CR>
+nnoremap <leader>f_ :Colors<CR>
 
 nnoremap <leader>/ :noh<CR>
+
 
 nmap <C-_> gcc
 vmap <C-_> gc
