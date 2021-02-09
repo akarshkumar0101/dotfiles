@@ -1,2 +1,3 @@
 # dotfiles
-Common command line files I use like .bashrc, .vimrc, .gitconfig, and tmux workspace script.
+My personal config files!
+Has files for .bashrc, .zshrc, .vimrc, .gitconfig, .tmux.conf, etc.
