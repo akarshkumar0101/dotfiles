@@ -18,9 +18,9 @@ ln -s $DIR/ui.vim ~/.config/nvim/ui.vim
 
 ln -s $DIR/tmux.conf ~/.tmux.conf
 
+ln -s $DIR/ssh/config ~/.ssh/config
 
 ln -s $DIR/gitconfig ~/.gitconfig
-
 
 ln -s $DIR/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
