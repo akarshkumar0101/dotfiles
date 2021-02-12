@@ -13,9 +13,9 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 
 " Make copy to end of the line work
-nnoremap Y y$
-nnoremap V v$
-nnoremap vv V
+noremap Y y$
+" nnoremap V v$
+" nnoremap vv V
 
 " naviagte 'display lines' instead of hard lines
 " from: http://stackoverflow.com/a/8347066
