@@ -1,6 +1,7 @@
 " inoremap fj <Esc>
 " inoremap jf <Esc>
 
+
 nnoremap <C-n> :tabnext<CR>
 nnoremap <C-p> :tabprevious<CR>
 
@@ -16,6 +17,10 @@ nnoremap <C-l> <C-W>l
 noremap Y y$
 " nnoremap V v$
 " nnoremap vv V
+
+" Add in-line object to select line without newline
+xnoremap il ^o$h
+onoremap il :normal vil<CR>
 
 " naviagte 'display lines' instead of hard lines
 " from: http://stackoverflow.com/a/8347066
@@ -55,6 +60,7 @@ nnoremap <leader>/ :noh<CR>
 
 
 nmap <C-_> gcc
+imap <C-_> <C-o>gcc
 vmap <C-_> gc
 
 
