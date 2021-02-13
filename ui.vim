@@ -28,6 +28,7 @@
 " colorscheme spacegray
 " colorscheme iceberg
 " colorscheme OceanicNext
+let g:space_vim_dark_background = 235
 colorscheme space-vim-dark
 " colorscheme dracula
 " colorscheme onedark
@@ -49,6 +50,12 @@ highlight! link EndOfBuffer LineNr
 set colorcolumn=80 | highlight! link ColorColumn LineNr 
 " set colorcolumn=80 | highlight ColorColumn ctermbg=238
 
+
+
+" For transparent background:
+" hi Normal     ctermbg=NONE guibg=NONE
+" hi LineNr     ctermbg=NONE guibg=NONE
+" hi SignColumn ctermbg=NONE guibg=NONE
 
 
 
