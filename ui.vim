@@ -72,3 +72,10 @@ set colorcolumn=80 | highlight! link ColorColumn LineNr
 
 " highlight VertSplit ctermfg=238 ctermbg=245
 
+
+
+set cursorline
+" set cursorcolumn
+
+
+
