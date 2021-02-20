@@ -35,6 +35,10 @@ colorscheme space-vim-dark
 " colorscheme nord
 
 
+" let g:airline_theme='bubblegum'
+let g:airline_theme='dark'
+
+
 " let g:gruvbox_transparent_bg = 1
 " set background=dark    " Setting dark mode
 " let g:gruvbox_number_column = 'fg'
