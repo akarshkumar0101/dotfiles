@@ -1,6 +1,8 @@
 " inoremap fj <Esc>
 " inoremap jf <Esc>
 
+" Search highlighted text (from: https://vim.fandom.com/wiki/Search_for_visually_selected_text)
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 nnoremap <C-n> :tabnext<CR>
 nnoremap <C-p> :tabprevious<CR>
