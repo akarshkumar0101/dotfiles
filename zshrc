@@ -1,3 +1,6 @@
+# To get rid of some warnings for autocomplete
+ZSH_DISABLE_COMPFIX="true"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/Library/Python/3.8/bin:$PATH
@@ -140,3 +143,8 @@ alias v='$EDITOR'
 alias bashrc='$EDITOR ~/.bashrc'
 alias zshrc='$EDITOR ~/.zshrc'
 
+# time the startup of zsh
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
