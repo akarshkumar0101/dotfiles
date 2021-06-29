@@ -7,8 +7,8 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 nnoremap <C-n> :tabnext<CR>
 nnoremap <C-p> :tabprevious<CR>
 
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+nnoremap <A-Left> :tabmove -1<CR>
+nnoremap <A-Right> :tabmove +1<CR>
 
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
@@ -57,6 +57,11 @@ nnoremap <leader>fhc :History:<CR>
 nnoremap <leader>fhs :History/<CR>
 nnoremap <leader>fc :Commits<CR>
 nnoremap <leader>f_ :Colors<CR>
+
+noremap <leader>nn :NERDTreeToggle<cr>
+noremap <leader>nn :NERDTreeTabsToggle<cr>
+noremap <leader>nb :NERDTreeFromBookmark<Space>
+noremap <leader>nf :NERDTreeFind<cr>
 
 nnoremap <leader>/ :noh<CR>
 

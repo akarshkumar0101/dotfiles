@@ -50,8 +50,8 @@ let g:airline_theme='dark'
 
 " My Custom Color Configuration:
 highlight Comment cterm=italic ctermfg=59
-highlight! link EndOfBuffer LineNr
-set colorcolumn=80 | highlight! link ColorColumn LineNr 
+" highlight! link EndOfBuffer LineNr
+" set colorcolumn=80 | highlight! link ColorColumn LineNr
 " set colorcolumn=80 | highlight ColorColumn ctermbg=238
 
 

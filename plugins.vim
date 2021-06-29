@@ -23,16 +23,19 @@ call plug#begin(VIM_PLUG_DIR)
 Plug 'junegunn/vim-plug'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
+
+" Plug 'junegunn/goyo.vim'
 " Parenthesis
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
+
 " Git
 Plug 'tpope/vim-fugitive'
 " Comments
 Plug 'tpope/vim-commentary'
 " Plug 'preservim/nerdcommenter'
+
 " NERDTree
 Plug 'preservim/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -43,12 +46,12 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " GitGutter
 Plug 'airblade/vim-gitgutter'
 
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 
 " Auto completion and linting
 
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'ycm-core/YouCompleteMe'
 " Make sure to run python3 install.py --all inside ~/.vim/bundle/YouCompleteMe
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -58,38 +61,38 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Plug 'dense-analysis/ale'
 
 " Indentation
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " Snippets
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Latex
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'https://github.com/vim-latex/vim-latex'
 
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 
 " Colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 " Plug 'ajh17/Spacegray.vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'joshdick/onedark.vim'
 " Plug 'arcticicestudio/nord-vim'
 
 
-Plug 'lilydjwg/colorizer'
+" Plug 'lilydjwg/colorizer'
 " Following plugin is better but it requires golang, so nah.
 " Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 
 
 " set nocompatible
-let g:python_highlight_all = 1
-Plug 'sheerun/vim-polyglot'
+" let g:python_highlight_all = 1
+" Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -122,10 +125,6 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 " let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
-noremap <leader>nn :NERDTreeToggle<cr>
-noremap <leader>nn :NERDTreeTabsToggle<cr>
-noremap <leader>nb :NERDTreeFromBookmark<Space>
-noremap <leader>nf :NERDTreeFind<cr>
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'~',
                 \ 'Staged'    :'+',
