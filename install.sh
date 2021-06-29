@@ -8,7 +8,7 @@ ln -s $DIR/zshrc ~/.zshrc
 
 mkdir -p ~/.config/nvim
 ln -s $DIR/init.vim ~/.config/nvim/init.vim
-ln -s $DIR/init.vim ~/.vimrc
+# ln -s $DIR/init.vim ~/.vimrc
 
 ln -s $DIR/options.vim ~/.config/nvim/options.vim
 ln -s $DIR/mappings.vim ~/.config/nvim/mappings.vim
