@@ -1,9 +1,56 @@
+Host grimes_no_ports
+  HostName grimes.biosci.utexas.edu
+  User akarshkumar0101
+
 Host grimes
   HostName grimes.biosci.utexas.edu
   User akarshkumar0101
   LocalForward 6006 localhost:6006
   LocalForward 8080 localhost:8080
-  LocalForward 8900 localhost:8889
+  LocalForward 8900 localhost:8900
   LocalForward 8950 localhost:8950
-  ForwardX11 yes
-  ForwardX11Trusted yes
+  # ForwardX11 yes
+  # ForwardX11Trusted yes
+
+Host eldar-11
+  HostName eldar-11.cs.utexas.edu
+  User akarsh
+  LocalForward 6006 localhost:6006
+  LocalForward 8080 localhost:8080
+  LocalForward 8900 localhost:8900
+  LocalForward 8950 localhost:8950
+  # ForwardX11 yes
+  # ForwardX11Trusted yes
+
+Host eldar-1
+  HostName eldar-1.cs.utexas.edu
+  User akarsh
+  LocalForward 6006 localhost:6006
+  LocalForward 8080 localhost:8080
+  LocalForward 8900 localhost:8900
+  LocalForward 8950 localhost:8950
+  # ForwardX11 yes
+  # ForwardX11Trusted yes
+
+Host darmok
+  HostName darmok.cs.utexas.edu
+  User akarsh
+
+Host mav
+  HostName maverick2.tacc.utexas.edu
+  User akumar01
+  LocalForward 8945 localhost:8945
+  LocalForward 8888 localhost:8888
+
+Host mav_no_ports
+  HostName maverick2.tacc.utexas.edu
+  User akumar01
+
+Host kamek
+  HostName kamek.ece.utexas.edu
+  User akumar4
+
+Host sahran
+  HostName 192.168.6.195
+  User akarshkumar0101
+
