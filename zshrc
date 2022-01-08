@@ -3,7 +3,8 @@ ZSH_DISABLE_COMPFIX="true"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/Library/Python/3.8/bin:$PATH
+PATH=$PATH:~/.local/bin
+export PATH=$PATH:$HOME/Library/Python/3.8/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -32,16 +33,16 @@ ZSH_THEME="lukerandall"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=60
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -53,10 +54,10 @@ ZSH_THEME="lukerandall"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -94,7 +95,7 @@ ZSH_THEME="lukerandall"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &>/dev/null
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &>/dev/null
 
-plugins=(git github vi-mode fzf z colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git github vi-mode fzf z colored-man-pages zsh-autosuggestions zsh-syntax-highlighting aliases common-aliases tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,6 +126,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 PATH=$PATH:~/.local/bin
+PATH=$PATH:~/miniconda3/bin
 
 alias reload='source ~/.zshrc'
 
@@ -143,8 +145,28 @@ alias v='$EDITOR'
 alias bashrc='$EDITOR ~/.bashrc'
 alias zshrc='$EDITOR ~/.zshrc'
 
+alias dsstore="find . -name \".DS_Store\""
+# alias rmdsstore="dsstore -delete" # this also works, but the following is more explicit
+alias rmdsstore="find . -name \".DS_Store\" -delete"
+
 # time the startup of zsh
 timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/akarshkumar0101/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/akarshkumar0101/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/akarshkumar0101/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/akarshkumar0101/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
