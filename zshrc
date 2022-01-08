@@ -145,9 +145,9 @@ alias v='$EDITOR'
 alias bashrc='$EDITOR ~/.bashrc'
 alias zshrc='$EDITOR ~/.zshrc'
 
-alias dsstore="find . -name \".DS_Store\""
+alias dsstore='find . -name ".DS_Store"'
 # alias rmdsstore="dsstore -delete" # this also works, but the following is more explicit
-alias rmdsstore="find . -name \".DS_Store\" -delete"
+alias rmdsstore='find . -name \".DS_Store\" -delete'
 
 # time the startup of zsh
 timezsh() {
