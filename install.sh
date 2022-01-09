@@ -19,6 +19,7 @@ ln -s $DIR/ui.vim ~/.config/nvim/ui.vim
 ln -s $DIR/tmux.conf ~/.tmux.conf
 
 ln -s $DIR/ssh/config ~/.ssh/config
+ln -s $DIR/ssh/authorized_keys ~/.ssh/authorized_keys
 
 ln -s $DIR/gitconfig ~/.gitconfig
 
