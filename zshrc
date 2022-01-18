@@ -127,6 +127,7 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=$PATH:~/.local/bin
 PATH=$PATH:~/miniconda3/bin
+PATH=$PATH:$WORK/miniconda3/bin
 
 alias reload='source ~/.zshrc'
 
