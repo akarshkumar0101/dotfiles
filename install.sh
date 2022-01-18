@@ -25,3 +25,5 @@ ln -s $DIR/gitconfig ~/.gitconfig
 
 ln -s $DIR/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
+ln -s $DIR/matplotlibrc ~/.matplotlib/matplotlibrc
+ln -s $DIR/default_matplotlibrc ~/.matplotlib/default_matplotlibrc
