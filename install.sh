@@ -1,29 +1,30 @@
+# get directory this script is located in
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+ln -s $DIR/bashrc $HOME/.bashrc
+ln -s $DIR/bash_profile $HOME/.bash_profile
 
-ln -s $DIR/bashrc ~/.bashrc
-ln -s $DIR/bash_profile ~/.bash_profile
+ln -s $DIR/zshrc $HOME/.zshrc
 
-ln -s $DIR/zshrc ~/.zshrc
+mkdir -p $HOME/.config/nvim
+ln -s $DIR/init.vim $HOME/.config/nvim/init.vim
+# ln -s $DIR/init.vim $HOME/.vimrc
 
-mkdir -p ~/.config/nvim
-ln -s $DIR/init.vim ~/.config/nvim/init.vim
-# ln -s $DIR/init.vim ~/.vimrc
+ln -s $DIR/options.vim $HOME/.config/nvim/options.vim
+ln -s $DIR/mappings.vim $HOME/.config/nvim/mappings.vim
+ln -s $DIR/plugins.vim $HOME/.config/nvim/plugins.vim
+ln -s $DIR/ui.vim $HOME/.config/nvim/ui.vim
 
-ln -s $DIR/options.vim ~/.config/nvim/options.vim
-ln -s $DIR/mappings.vim ~/.config/nvim/mappings.vim
-ln -s $DIR/plugins.vim ~/.config/nvim/plugins.vim
-ln -s $DIR/ui.vim ~/.config/nvim/ui.vim
+ln -s $DIR/tmux.conf $HOME/.tmux.conf
 
+mkdir $HOME/.ssh
+ln -s $DIR/ssh/config $HOME/.ssh/config
+ln -s $DIR/ssh/authorized_keys $HOME/.ssh/authorized_keys
 
-ln -s $DIR/tmux.conf ~/.tmux.conf
+ln -s $DIR/gitconfig $HOME/.gitconfig
 
-ln -s $DIR/ssh/config ~/.ssh/config
-ln -s $DIR/ssh/authorized_keys ~/.ssh/authorized_keys
+mkdir $HOME/.matplotlib
+ln -s $DIR/matplotlibrc $HOME/.matplotlib/matplotlibrc
+ln -s $DIR/default_matplotlibrc $HOME/.matplotlib/default_matplotlibrc
 
-ln -s $DIR/gitconfig ~/.gitconfig
-
-ln -s $DIR/libinput-gestures.conf ~/.config/libinput-gestures.conf
-
-ln -s $DIR/matplotlibrc ~/.matplotlib/matplotlibrc
-ln -s $DIR/default_matplotlibrc ~/.matplotlib/default_matplotlibrc
+ln -s $DIR/libinput-gestures.conf $HOME/.config/libinput-gestures.conf

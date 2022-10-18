@@ -19,3 +19,12 @@ pytorch-lightning
 tqdm
 
 torch
+
+
+wandb
+plotly
+
+pandas
+
+seaborn
+

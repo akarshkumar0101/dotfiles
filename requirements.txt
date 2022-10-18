@@ -1,0 +1,14 @@
+
+
+matplotlib
+tqdm
+numpy
+
+
+# pytorch
+# torchvision
+
+jupyterlab_vim
+
+
+

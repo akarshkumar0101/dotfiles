@@ -46,6 +46,8 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " GitGutter
 Plug 'airblade/vim-gitgutter'
 
+Plug 'github/copilot.vim'
+
 " Plug 'liuchengxu/vista.vim'
 
 " Auto completion and linting
