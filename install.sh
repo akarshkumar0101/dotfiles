@@ -1,55 +1,41 @@
 # get directory this script is located in
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# ln -s $DIR/bashrc $HOME/.bashrc
-# ln -s $DIR/bash_profile $HOME/.bash_profile
-
-# ln -s $DIR/zshrc $HOME/.zshrc
-
-# mkdir -p $HOME/.config/nvim
-# ln -s $DIR/init.vim $HOME/.config/nvim/init.vim
-# # ln -s $DIR/init.vim $HOME/.vimrc
-
-# ln -s $DIR/options.vim $HOME/.config/nvim/options.vim
-# ln -s $DIR/mappings.vim $HOME/.config/nvim/mappings.vim
-# ln -s $DIR/plugins.vim $HOME/.config/nvim/plugins.vim
-# ln -s $DIR/ui.vim $HOME/.config/nvim/ui.vim
-
-# ln -s $DIR/tmux.conf $HOME/.tmux.conf
-
-# mkdir $HOME/.ssh
-# ln -s $DIR/ssh/config $HOME/.ssh/config
-# ln -s $DIR/ssh/authorized_keys $HOME/.ssh/authorized_keys
-
-# ln -s $DIR/gitconfig $HOME/.gitconfig
-
-# mkdir $HOME/.matplotlib
-# ln -s $DIR/matplotlibrc $HOME/.matplotlib/matplotlibrc
-# ln -s $DIR/default_matplotlibrc $HOME/.matplotlib/default_matplotlibrc
-
-# ln -s $DIR/libinput-gestures.conf $HOME/.config/libinput-gestures.conf
-
-
-
-cp $DIR/bashrc $HOME/.bashrc
+# ---------------BASH---------------
 cp $DIR/bash_profile $HOME/.bash_profile
+cp $DIR/bashrc $HOME/.bashrc
 
+# ---------------ZSH---------------
+# To install oh-my-zsh:
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 cp $DIR/zshrc $HOME/.zshrc
 
+# ---------------VIM/NVIM---------------
+# To install vim-plug for vim:
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# To install vim-plug for nvim:
+# sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 mkdir -p $HOME/.config/nvim
-cp $DIR/init.vim $HOME/.config/nvim/init.vim
-# # ln -s $DIR/init.vim $HOME/.vimrc
+cp $DIR/vimrc $HOME/.config/nvim/init.vim
+cp $DIR/vimrc $HOME/.vimrc
 
+# ---------------TMUX---------------
 cp $DIR/tmux.conf $HOME/.tmux.conf
 
-# mkdir $HOME/.ssh
+# ---------------SSH---------------
+mkdir -p $HOME/.ssh
 cp $DIR/ssh/config $HOME/.ssh/config
 cp $DIR/ssh/authorized_keys $HOME/.ssh/authorized_keys
 
+# ---------------GIT---------------
 cp $DIR/gitconfig $HOME/.gitconfig
 
-# mkdir $HOME/.matplotlib
+# ---------------MATPLOTLIB---------------
+mkdir -p $HOME/.matplotlib
 cp $DIR/matplotlibrc $HOME/.matplotlib/matplotlibrc
 cp $DIR/default_matplotlibrc $HOME/.matplotlib/default_matplotlibrc
 
+# ---------------LIBINPUT-GESTURES---------------
 cp $DIR/libinput-gestures.conf $HOME/.config/libinput-gestures.conf
