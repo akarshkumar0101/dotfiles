@@ -1,4 +1,5 @@
 " Akarsh's Vim Config
+" --------------------
 
 let g:mapleader = ","
 " Debugging variables
@@ -160,11 +161,5 @@ let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
 let g:airline_theme = 'everforest'
 colorscheme everforest
-
-
-
-
-
-
 
 
