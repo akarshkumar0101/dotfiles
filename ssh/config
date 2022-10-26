@@ -81,7 +81,8 @@ Host isolab46
   User akumar01
   LocalForward 8960 localhost:8960
   LocalForward 8961 localhost:8961
-  ProxyJump jump.csail.mit.edu
+  # ProxyJump jump.csail.mit.edu # this is newer version
+  ProxyCommand ssh jump.csail.mit.edu -W %h:%p
   GSSAPIAuthentication yes
   GSSAPIDelegateCredentials yes
 
@@ -109,7 +110,9 @@ Host jump.csail.mit.edu
   User akumar01
 
 Host *.csail.mit.edu !jump.csail.mit.edu 128.52.* 128.30.* 128.31.*
-  ProxyJump jump.csail.mit.edu
+  # ProxyJump jump.csail.mit.edu # this is newer version
+  # https://hsf-training.github.io/hsf-training-ssh-webpage/04-config/index.html
+  ProxyCommand ssh jump.csail.mit.edu -W %h:%p
   GSSAPIAuthentication yes
   GSSAPIDelegateCredentials yes
   # optional, if X forwarding is desired
