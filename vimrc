@@ -103,6 +103,7 @@ Plug 'junegunn/vim-plug' " Plugin manager
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 
+Plug 'tpope/vim-repeat' " Repeat plugin mappings with .
 Plug 'jiangmiao/auto-pairs' " Parenthesis
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary' " For Comments
@@ -125,6 +126,7 @@ Plug 'joshdick/onedark.vim'
 
 Plug 'tmhedberg/SimpylFold'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
 
 call plug#end()
