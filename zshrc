@@ -79,7 +79,6 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
 plugins=(git vi-mode fzf z colored-man-pages zsh-autosuggestions zsh-syntax-highlighting aliases common-aliases tmux)
 
 source $ZSH/oh-my-zsh.sh
@@ -139,7 +138,4 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
-
-# --------------------------------------------------------------------------------
-# Starting computer specific stuff!
 
