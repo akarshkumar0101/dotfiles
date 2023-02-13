@@ -1,3 +1,6 @@
+ipython
+jupyterlab-vim
+
 numpy
 xarray
 pandas
@@ -9,22 +12,23 @@ sympy
 
 matplotlib
 
-gym
+gymnasium
 
 
 wandb
 pytorch-lightning
 
-
 tqdm
 
 torch
 
-
 wandb
 plotly
 
-pandas
-
 seaborn
 
+einops
+opencv-python
+
+
+torch-summary
