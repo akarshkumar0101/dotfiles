@@ -136,6 +136,6 @@ alias rmdsstore='find . -name \".DS_Store\" -delete'
 # time the startup of zsh
 timezsh() {
   shell=${1-$SHELL}
-  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+  for i in $(seq 1 5); do time $shell -i -c exit; done
 }
 
