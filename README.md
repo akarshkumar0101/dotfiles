@@ -33,6 +33,12 @@ git clone --depth 1 git@github.com:junegunn/fzf.git
 echo "source $HOME/dotfiles/vimrc" >> $HOME/.vimrc
 ```
 
+To install the colorscheme:
+```bash
+cp $HOME/dotfiles/habamax.vim  $HOME/.vim/colors
+```
+`habamax.vim` originally came from `wget https://raw.githubusercontent.com/habamax/vim-habamax/master/colors/habamax.vim`
+
 ## Neovim (with the plugins)
 ```bash
 mkdir -p .config/nvim/

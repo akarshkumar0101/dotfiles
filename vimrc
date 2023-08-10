@@ -34,8 +34,10 @@ set wrapscan               " Searches wrap around end-of-file.
 set report      =0         " Always report changed lines.
 set synmaxcol   =200       " Only highlight the first 200 columns.
 
-" colorscheme habamax        " colorscheme habamax
-source $HOME/dotfiles/habamax.vim
+try
+  colorscheme habamax
+catch
+endtry
 
 " ---------------------------------------- 
 " set updatetime=750
