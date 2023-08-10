@@ -1,35 +1,67 @@
-" Akarsh's Vim Config
-" --------------------
+" Adapted from https://github.com/mhinz/vim-galore/blob/master/static/minimal-vimrc.vim
+
+set nocompatible           " Ignore Vi compatible
+
+filetype plugin indent on  " Load plugins according to detected filetype.
+syntax on                  " Enable syntax highlighting.
+set relativenumber         " Relative line numbers.
+
+set autoindent             " Indent according to previous line.
+set expandtab              " Use spaces instead of tabs.
+set softtabstop =4         " Tab key indents by 4 spaces.
+set shiftwidth  =4         " >> indents by 4 spaces.
+set shiftround             " >> indents to next multiple of 'shiftwidth'.
+
+set backspace   =indent,eol,start  " Make backspace work as you would expect.
+set hidden                 " Switch between buffers without having to save first.
+set laststatus  =2         " Always show statusline.
+set display     =lastline  " Show as much as possible of the last line.
+
+set showmode               " Show current mode in command-line.
+set showcmd                " Show already typed keys when more are expected.
+
+set incsearch              " Highlight while searching with / or ?.
+set hlsearch               " Keep matches highlighted.
+
+set ttyfast                " Faster redrawing.
+set lazyredraw             " Only redraw when necessary.
+
+set splitbelow             " Open new windows below the current window.
+set splitright             " Open new windows right of the current window.
+
+set cursorline             " Find the current line quickly.
+set wrapscan               " Searches wrap around end-of-file.
+set report      =0         " Always report changed lines.
+set synmaxcol   =200       " Only highlight the first 200 columns.
+
+colorscheme habamax        " colorscheme habamax
+
+" ---------------------------------------- 
+" set updatetime=750
+" set wildmenu
+" set smarttab " be smart when using tabs ;)
+" set shiftwidth=4 | set tabstop=4 " 1 tab == 4 spaces
+" set linebreak | set tw=500 " Linebreak on 500 characters
+" set autoindent | set smartindent
+" set wrap
+" set foldmethod=indent
+" set foldlevel=99
 
 let g:mapleader = ","
-" Debugging variables
 " noremap <leader>r :source $MYVIMRC <CR>
 " noremap <leader>s :reg +<CR>:reg *<CR>
-"
-syntax enable
 
-set cursorline
-" set cursorcolumn
-set updatetime=750
-set wildmenu
-set relativenumber
-set number
-" set list
-set hlsearch
-set expandtab " Use spaces instead of tabs
-set smarttab " be smart when using tabs ;)
-set shiftwidth=4 | set tabstop=4 " 1 tab == 4 spaces
-set linebreak | set tw=500 " Linebreak on 500 characters
-set autoindent | set smartindent
-set wrap
-set foldmethod=indent
-set foldlevel=99
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Clipboard Stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://stackoverflow.com/questions/30691466/what-is-difference-between-vims-clipboard-unnamed-and-unnamedplus-settings
+" Don't want this because it will copy dd command into system clipboard
+" set clipboard=unnamedplus 
+noremap <leader>y "+y | map <leader>Y "+Y
+noremap <leader>p "+p | map <leader>P "+P
+noremap <leader>d "+d | map <leader>D "+D
+noremap <leader>x "+x | map <leader>X "+X
 
-
-" inoremap fj <Esc>
-" inoremap jf <Esc>
-"
-" Toggle fold
 nnoremap <space> za
 
 vnoremap / <Esc>/\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
@@ -68,100 +100,6 @@ onoremap il :normal vil<CR>
 " noremap <silent> <End> g<End>
 " imap <silent> <End> <C-o>g<End>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Clipboard Stuff
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" https://stackoverflow.com/questions/30691466/what-is-difference-between-vims-clipboard-unnamed-and-unnamedplus-settings
-" Don't want this because it will copy dd command into system clipboard
-" set clipboard=unnamedplus 
-noremap <leader>y "+y | map <leader>Y "+Y
-noremap <leader>p "+p | map <leader>P "+P
-noremap <leader>d "+d | map <leader>D "+D
-noremap <leader>x "+x | map <leader>X "+X
 
 autocmd FileType python nnoremap <buffer> <leader>r :echo "running"<CR>
 " autocmd FileType markdown nmap <buffer> <leader>r <Plug>MarkdownPreviewToggle
-
-" if has('nvim')
-"   if empty(glob('~/.config/nvim/autoload/plug.vim'))
-"     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-"       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"   endif
-"   let VIM_PLUG_DIR = '~/.config/nvim/autoload/plugged'
-" else
-"   if empty(glob('~/.vim/autoload/plug.vim'))
-"     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-"       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"   endif
-"   let VIM_PLUG_DIR = '~/.vim/plugged'
-" endif
-
-call plug#begin()
-
-Plug 'junegunn/vim-plug' " Plugin manager
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder
-Plug 'junegunn/fzf.vim'
-
-Plug 'tpope/vim-repeat' " Repeat plugin mappings with .
-Plug 'jiangmiao/auto-pairs' " Parenthesis
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary' " For Comments
-
-Plug 'vim-scripts/indentpython.vim'
-Plug 'jeetsukumaran/vim-pythonsense'
-
-Plug 'tpope/vim-fugitive' " For Git commands?
-Plug 'airblade/vim-gitgutter'
-
-Plug 'preservim/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] } " Directory tree
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
-
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'sainnhe/everforest'
-Plug 'joshdick/onedark.vim'
-
-Plug 'tmhedberg/SimpylFold'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'github/copilot.vim'
-
-call plug#end()
-
-nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fb :Buffers<CR>
-nnoremap <leader>fl :Lines<CR>
-nnoremap <leader>fs :Snippets<CR>
-nnoremap <leader>fw :Windows<CR>
-nnoremap <leader>fm :Marks<CR>
-nnoremap <leader>fhc :History:<CR>
-nnoremap <leader>fhs :History/<CR>
-nnoremap <leader>fc :Commits<CR>
-nnoremap <leader>f_ :Colors<CR>
-
-noremap <leader>nn :NERDTreeToggle<cr>
-noremap <leader>nn :NERDTreeTabsToggle<cr>
-noremap <leader>nb :NERDTreeFromBookmark<Space>
-noremap <leader>nf :NERDTreeFind<cr>
-
-nnoremap <leader>/ :noh<CR>
-
-nmap <C-_> gcc
-imap <C-_> <C-o>gcc
-vmap <C-_> gc
-
-
-"syntax on
-" colorscheme onedark
-
-set background=dark
-let g:everforest_disable_italic_comment = 1
-let g:everforest_background = 'soft'
-let g:everforest_better_performance = 1
-let g:airline_theme = 'everforest'
-colorscheme everforest
-
-

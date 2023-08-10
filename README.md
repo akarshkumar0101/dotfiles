@@ -1,14 +1,55 @@
 # dotfiles
 My personal config files!
-Has files for .bashrc, .zshrc, .vimrc, .gitconfig, .tmux.conf, etc.
+Has files for
+- .bashrc
+- .zshrc
+- .vimrc
+- .gitconfig
+- .tmux.conf
+
+Preferred installation is to source the files in this repo.
+This allows you to put computer-specific commands afterwards.
 
 
-To install this, run ```bash install.sh```.
-Look into this final for additional commands you may need to run.
+## Zsh
+```bash
+echo "source $HOME/dotfiles/zshrc" >> $HOME/.zshrc
+```
 
-This installs zsh, nvim, tmux, etc. config files that are independent files (not symlinks) but they source to this repo.
-Then, I can also use computer-specific commands within the config file after sourcing.
+To install the plugins:
+```bash
+mkdir -p $HOME/.zsh/plugins
+cd $HOME/.zsh/plugins
 
-For iterm2, just import the iterm2.json within iterm2's preferences.
+git clone git@github.com:agkozak/zsh-z.git
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
+git clone git@github.com:jeffreytse/zsh-vi-mode.git
+git clone --depth 1 git@github.com:junegunn/fzf.git
+./fzf/install
+```
 
+## Vim
+```bash
+echo "source $HOME/dotfiles/vimrc" >> $HOME/.vimrc
+```
 
+## Neovim (with the plugins)
+```bash
+mkdir -p .config/nvim/
+echo "source $HOME/dotfiles/nvimrc" >> $HOME/.config/nvim/init.vim
+```
+When you enter nvim, run `:PlugInstall` and `:PlugClean`.
+
+To install [vim-plug](https://github.com/junegunn/vim-plug):
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Tmux
+```bash
+echo "source-file $HOME/dotfiles/tmux.conf" >> $HOME/.tmux.conf
+```
+
+## Iterm2
+Import `iterm2.json` within iterm2's preferences.
