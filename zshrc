@@ -19,6 +19,7 @@ alias ls='ls --color'
 alias l='ls -lFh'
 alias la='ls -lAFh'
 alias grep='grep --color'
+alias diff='diff --color'
 alias ta='tmux a'
 
 alias g='git'
