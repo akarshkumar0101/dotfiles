@@ -15,6 +15,7 @@ setopt PROMPT_SUBST
 export PROMPT='${COLOR_USR}%n @ %m ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} » '
 
 # ---------------------- ALIASES ----------------------
+alias ls='ls --color'
 alias l='ls -lFh'
 alias la='ls -lAFh'
 alias grep='grep --color'

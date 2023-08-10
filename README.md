@@ -35,7 +35,8 @@ echo "source $HOME/dotfiles/vimrc" >> $HOME/.vimrc
 
 To install the colorscheme:
 ```bash
-cp $HOME/dotfiles/habamax.vim  $HOME/.vim/colors
+mkdir -p $HOME/.vim/colors/
+cp $HOME/dotfiles/habamax.vim $HOME/.vim/colors/
 ```
 `habamax.vim` originally came from `wget https://raw.githubusercontent.com/habamax/vim-habamax/master/colors/habamax.vim`
 
