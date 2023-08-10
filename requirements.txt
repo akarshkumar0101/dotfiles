@@ -1,14 +1,17 @@
+numpy==1.25.2
 
+opencv-python==4.8.0.74
 
-matplotlib
-tqdm
-numpy
+torch==2.0.1
+einops==0.6.1
+torchinfo==1.8.0
 
+jupyterlab==4.0.2
+jupyterlab-vim==0.16.0
+tqdm==4.65.0
+ipywidgets==8.0.7
 
-# pytorch
-# torchvision
-
-jupyterlab_vim
-
-
-
+matplotlib==3.5.3
+wandb==0.15.8
+moviepy==1.0.3  # needed for proper processing of wandb videos
+imageio==2.26.0  # (specific version) needed for proper processing of wandb videos
