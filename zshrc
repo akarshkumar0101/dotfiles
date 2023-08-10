@@ -44,3 +44,8 @@ source $ZSH/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 
+# ---------------------- DEBUGGING ----------------------
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do time $shell -i -c exit; done
+}
