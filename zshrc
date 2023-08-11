@@ -1,5 +1,10 @@
 export DOTFILES=$HOME/dotfiles
 
+# ---------------------- CONFIG ----------------------
+
+SAVEHIST=10000  # Save most recent n lines
+HISTFILE=$HOME/.zsh_history
+
 # ---------------------- PROMPT VARIABLE ----------------------
 # From: https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
 function parse_git_branch() {
