@@ -60,3 +60,11 @@ echo "source-file $HOME/dotfiles/tmux.conf" >> $HOME/.tmux.conf
 
 ## Iterm2
 Import `iterm2.json` within iterm2's preferences.
+
+
+## Docker
+In this directory:
+```bash
+docker build --platform linux/amd64 --tag akarshkumar0101/dotfiles .
+docker run --platform linux/amd64 --rm -it -e "TERM=xterm-256color" akarshkumar0101/dotfiles zsh
+```
