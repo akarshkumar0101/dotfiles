@@ -4,6 +4,7 @@ export DOTFILES=$HOME/dotfiles
 
 SAVEHIST=10000  # Save most recent n lines
 HISTFILE=$HOME/.zsh_history
+setopt share_history # https://askubuntu.com/questions/23630/how-do-you-share-history-between-terminals-in-zsh
 
 # ---------------------- PROMPT VARIABLE ----------------------
 # From: https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
