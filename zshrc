@@ -42,7 +42,9 @@ export EDITOR=vim
 export VISUAL=vim
 
 # from https://stackoverflow.com/questions/50264491/how-do-i-customize-nvidia-smi-s-output-to-show-pid-username
-alias gps="nvidia-smi && ps -up `nvidia-smi -q -x | grep pid | sed -e 's/<pid>//g' -e 's/<\/pid>//g' -e 's/^[[:space:]]*//'`"
+function gps() { # needs to be function to be inherited by subshells (used by watch command)
+    nvidia-smi && ps -up `nvidia-smi -q -x | grep pid | sed -e 's/<pid>//g' -e 's/<\/pid>//g' -e 's/^[[:space:]]*//'`
+}
 alias gtop="watch -n 1 gps"
 
 # ---------------------- PLUGINS ----------------------
