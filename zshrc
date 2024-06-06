@@ -41,6 +41,10 @@ alias gst='git status'
 export EDITOR=vim
 export VISUAL=vim
 
+# from https://stackoverflow.com/questions/50264491/how-do-i-customize-nvidia-smi-s-output-to-show-pid-username
+alias gps="nvidia-smi && ps -up `nvidia-smi -q -x | grep pid | sed -e 's/<pid>//g' -e 's/<\/pid>//g' -e 's/^[[:space:]]*//'`"
+alias gtop="watch -n 1 gps"
+
 # ---------------------- PLUGINS ----------------------
 export ZSH=$HOME/.zsh
 
@@ -57,3 +61,4 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do time $shell -i -c exit; done
 }
+
