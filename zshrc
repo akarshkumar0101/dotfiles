@@ -42,7 +42,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 # from https://stackoverflow.com/questions/50264491/how-do-i-customize-nvidia-smi-s-output-to-show-pid-username
-export gps_command="nvidia-smi && ps -up `nvidia-smi -q -x | grep pid | sed -e 's/<pid>//g' -e 's/<\/pid>//g' -e 's/^[[:space:]]*//'`"
+export gps_command="nvidia-smi && ps -up \`nvidia-smi -q -x | grep pid | sed -e 's/<pid>//g' -e 's/<\/pid>//g' -e 's/^[[:space:]]*//'\`"
 alias gps="eval \$gps_command"
 alias gtop="watch -n 1 'eval \$gps_command'"  # watch launches subshell, so only sees exported strings, not aliases
 
