@@ -1,24 +1,5 @@
+# ---------------------- VARS ----------------------
 export DOTFILES=$HOME/dotfiles
-
-# ---------------------- CONFIG ----------------------
-
-SAVEHIST=10000  # Save most recent n lines
-HISTFILE=$HOME/.zsh_history
-# setopt share_history # https://askubuntu.com/questions/23630/how-do-you-share-history-between-terminals-in-zsh
-
-# ---------------------- PROMPT VARIABLE ----------------------
-# From: https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
-}
-
-COLOR_DEF=$'%f'
-COLOR_USR=$'%F{243}'
-COLOR_DIR=$'%F{197}'
-COLOR_GIT=$'%F{39}'
-setopt PROMPT_SUBST
-# export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
-export PROMPT='${COLOR_USR}%n @ %m ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} » '
 
 # ---------------------- ALIASES ----------------------
 alias ls='ls --color'
@@ -45,6 +26,26 @@ export VISUAL=vim
 export gps_command="nvidia-smi && ps -up \`nvidia-smi -q -x | grep pid | sed -e 's/<pid>//g' -e 's/<\/pid>//g' -e 's/^[[:space:]]*//'\`"
 alias gps="eval \$gps_command"
 alias gtop="watch -n 1 'eval \$gps_command'"  # watch launches subshell, so only sees exported strings, not aliases
+
+# ---------------------- ZSH PROMPT VARIABLE ----------------------
+# From: https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+COLOR_DEF=$'%f'
+COLOR_USR=$'%F{243}'
+COLOR_DIR=$'%F{197}'
+COLOR_GIT=$'%F{39}'
+setopt PROMPT_SUBST
+# export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+export PROMPT='${COLOR_USR}%n @ %m ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} » '
+
+# ---------------------- ZSH CONFIG ----------------------
+SAVEHIST=10000  # Save most recent n lines
+HISTFILE=$HOME/.zsh_history
+# setopt share_history # https://askubuntu.com/questions/23630/how-do-you-share-history-between-terminals-in-zsh
+
 
 # ---------------------- PLUGINS ----------------------
 export ZSH=$HOME/.zsh
