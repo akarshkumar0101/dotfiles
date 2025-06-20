@@ -10,6 +10,11 @@ Has files for
 Preferred installation is to source the files in this repo.
 This allows you to put computer-specific commands afterwards.
 
+## Bash
+
+```bash
+echo "source $HOME/dotfiles/bashrc" >> $HOME/.bashrc
+```
 
 ## Zsh
 ```bash
